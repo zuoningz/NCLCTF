@@ -1,7 +1,7 @@
 import subprocess
 
 # Directory path to loop through
-with open('file.txt', 'r') as file:
+with open('files.txt', 'r') as file:
     i = 0
     # Loop through each line in the file
     for line in file:
