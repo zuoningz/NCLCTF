@@ -15,8 +15,9 @@ with open('files.txt', 'r') as file:
         # Run the commands and connect the output of cmd1 to the input of cmd2 using pipes
         p1 = subprocess.Popen(cmd1, stdout=subprocess.PIPE)
         p2 = subprocess.Popen(cmd2, stdin=p1.stdout, stdout=subprocess.PIPE, stderr=subprocess.PIPE)  # Pass an empty input
-        p1.stdout.close()
-        p1.wait()
+        # p1.stdout.close()
+        p1.communicate()
+        # p1.wait()
         p2.wait()
 
         # Get the exit code of the gpg command
