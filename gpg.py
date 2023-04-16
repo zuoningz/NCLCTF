@@ -19,6 +19,7 @@ with open('files.txt', 'r') as file:
         output, error = p2.communicate()
         # Decode the output and error messages from bytes to string
         output = output.decode()
+        print(output)
         output_file = "output.txt"
         with open(output_file, "a") as outfile:
             # Write the text to a new line
