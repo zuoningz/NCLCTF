@@ -7,9 +7,9 @@ with open('files.txt', 'r') as file:
     for line in file:
         # Process the line
         print(line.strip())
-        filename = line.strip()
+        filename = "files.txt"
         # Define the command with pipes
-        cmd1 = ["cat", filename]
+        cmd1 = ["cat", "files.txt"]
         cmd2 = ["gpg", "--verify-files"]
 
         # Run the commands and connect the output of cmd1 to the input of cmd2 using pipes
