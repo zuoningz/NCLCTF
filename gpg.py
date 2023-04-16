@@ -9,7 +9,7 @@ with open('files.txt', 'r') as file:
         print(line.strip())
         filename = line.strip()
         cmd = ["gpg", "--verify", filename]
-        output = subprocess.check_output(cmd, stderr=subprocess.STDOUT, text=True)
+        output = subprocess.check_output(cmd, stderr=subprocess.STDOUT).decode()
         output_file = "output.txt"
         with open(output_file, "a") as outfile:
             # Write the text to a new line
